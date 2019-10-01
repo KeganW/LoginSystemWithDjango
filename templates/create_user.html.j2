@@ -1,0 +1,83 @@
+
+<!-- Dynamic page that creates a user and displays errors otherwise -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Create User </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="wrapperContact">
+	
+<form action="create" method="post">
+
+	{% csrf_token %}
+
+	<h2> Welcome </h2>
+
+	{% if not user.is_authenticated %}
+
+	<div class="error">
+
+		<h4> {{error}} <h4>
+
+	</div>
+
+	<div class="success">
+
+		<h4> {{success}} <h4>
+
+	</div>
+
+	<h4> First: </h4>
+	<input type="text" name="first" placeholder="Enter your first name.">
+
+	<h4> Last: </h4>
+	<input type="text" name="last" placeholder="Enter your last name.">
+
+	<h4> Username: </h4>	
+	<input type="text" name="username" placeholder="Create a username.">
+
+	<h4> Email: </h4>
+	<input type="email" name="email" placeholder="Enter your email.">
+
+	<h4> Password: </h4>
+	<input type="password" name="password" placeholder="Create a password.">
+
+	<h4> Verify: <h4>
+	<input type="password" name="passwordVer" placeholder="Reenter your password.">
+
+
+	<button type="submit" name="submit"> Create Account </button>
+
+	<br> 
+	<hr>
+
+	{% endif %} 
+
+	{% if user.is_authenticated %}
+
+	<h4> Hello {{user.first_name}}, I hope you have a good day! </h4>
+	<h4> Feel free to check out my personal website: </h4>
+	<h4> <a href = "https://keganw.github.io/KegansWebsite/"> https://keganw.github.io/KegansWebsite </a> <h4>
+
+	<br>
+
+	<h4> <a href="{% url 'logout' %}"> Logout here. </a> </h4>
+
+	{% else %}
+
+	<h4> Already have an account? <h4>
+
+	<br> 
+
+	<h4> <a href="{% url 'login' %}"> Login here. </a> <h4>
+
+	{% endif %}
+<div>
+		
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Dynamic page that logins the user and displays errors otherwise -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+<div class="wrapperContact">
+	
+<form action="login" method="post">
+ 		
+ {% csrf_token %}
+
+ 	<div class = "error">
+
+ 		<h4> {{error}} </h4>
+
+ 	</div>
+		
+	<h4> Username: </h4>	
+	<input type="text" name="userid" placeholder="Enter your username.">
+
+	<h4> Password: </h4>
+	<input type="password" name="userpassword" placeholder="Enter your password.">
+	<button type="submit" name="submit"> Login </button>
+
+</form>
+</div>
+</body>
+</html>

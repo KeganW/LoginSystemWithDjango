@@ -1,0 +1,169 @@
+/* Styling for all pages on personal website. 
+   Created by: Kegan Wong
+   Date: 07/01/19
+*/
+
+
+
+/* global font */
+*{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+
+/* global tag changes */
+a{
+	text-decoration: blink;
+	color:black;
+}
+
+a:hover{
+	
+}
+
+
+body,div{
+	margin:0;
+	padding:0;
+}
+
+h1,h2{
+	font-weight: normal;
+}
+
+h4{
+	padding:0;
+	margin:0;
+}
+
+
+mark{
+	background-color:orange;
+	color:yellow;
+}
+
+
+ul {
+	  list-style: none;
+	  margin:0;
+	  padding:0; 
+}
+
+
+
+
+/* contact page */
+.wrapperContact{
+
+}
+
+/* design for title */
+.wrapperContact h2{
+	padding:20px;
+	margin: 0px 0px 65px 0px;
+	text-align: center;
+	font-size: 30px;
+	border:inset 3px black;
+}
+
+/* design for subheaders */
+.wrapperContact h4{
+	text-align: center;
+	margin: 25px;
+	font-size: 20px;
+}
+
+
+/* design for descripion of page */
+.wrapperContact p{
+
+	font-size: 18px;
+	text-align: center;
+	line-height: 29px;
+	margin: 30px 30px 75px 30px;
+	border:dashed 4px grey;
+	padding: 12px;
+}
+
+
+/* design for boxes to input info */
+input{
+	display:block;
+	width: 200px;
+	outline: none;
+	margin: auto;
+	border: solid 2px grey;
+
+}
+
+textarea{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 100px;
+	resize:none;
+	border: solid 2px grey;
+	outline: none;
+}
+
+select{
+
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 2px grey;
+	outline: none;
+
+}
+
+
+button{
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	font-size: 30px;
+	border: solid 2px grey;
+
+
+}
+
+
+.basicInfo {
+	margin-top: 150px;
+	height:300px;
+	background-color: #eee;
+	border: 2px solid black;
+
+
+}
+
+.basicInfo p{
+	text-align: center;
+	font-size: 20px;
+	margin: 15px;
+    padding-top: 75px; 
+	line-height: 25px;
+
+}
+
+
+/* design for error and success text in contact form */
+.error  {
+	text-align: center;
+	color: red;
+	font-size: 30px;
+	padding: 10px;
+
+}
+
+.success {
+	text-align: center;
+	color: green;
+	font-size: 30px;
+}
+
+} 
